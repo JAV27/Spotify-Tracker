@@ -6,7 +6,6 @@
  * For more information, read
  * https://developer.spotify.com/web-api/authorization-guide/#authorization_code_flow
  */
-const config = require('./public/resources/js/config.js');
 var express = require('express'); // Express web server framework
 var request = require('request'); // "Request" library
 var cors = require('cors');
@@ -16,9 +15,9 @@ var cookieParser = require('cookie-parser');
 var SpotifyWebApi = require('spotify-web-api-node');
 
 const port = process.env.PORT || 8888;
-var client_id = config.CLIENT_ID; // Your client id
-var client_secret = config.CLIENT_SECRET; // Your secret
-var redirect_uri = config.REDIRECT_URI; // Your redirect uri
+var client_id = process.env.CLIENT_ID; // Your client id
+var client_secret = process.env.CLIENT_SECRET; // Your secret
+var redirect_uri = process.env.REDIRECT_URI; // Your redirect uri
 
 let spotifyApi = new SpotifyWebApi({
   clientId: client_id,
