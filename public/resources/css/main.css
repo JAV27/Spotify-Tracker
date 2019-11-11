@@ -1,0 +1,16 @@
+.jumbotron {
+    background-color: #181818	;
+    color: white;
+}
+
+body {
+    background-color: #181818	;
+}
+
+.list-group-mine .list-group-item.active {
+    background-color: #1DB954;
+}
+
+img.artist-image, img.track-image {
+    border-radius: 100%;
+}
