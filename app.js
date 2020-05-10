@@ -206,6 +206,11 @@ app.get('/main', function(req, res) {
     });
 
     let topArtistsShort = resp[5].items.map((i) => {
+      if(i.images[0] == undefined) {
+        return {
+            name: i.name,
+        }
+      }  
       return {
         name: i.name,
         imageUrl: i.images[0].url
@@ -213,6 +218,13 @@ app.get('/main', function(req, res) {
     });
 
     let topArtistsMedium = resp[6].items.map((i) => {
+
+      if(i.images[0] == undefined) {
+        return {
+            name: i.name,
+        }
+      }  
+
       return {
         name: i.name,
         imageUrl: i.images[0].url
@@ -220,6 +232,13 @@ app.get('/main', function(req, res) {
     });
 
     let topArtistsLong = resp[7].items.map((i) => {
+      
+      if(i.images[0] == undefined) {
+        return {
+            name: i.name,
+        }
+      }  
+
       return {
         name: i.name,
         imageUrl: i.images[0].url
